@@ -24,22 +24,6 @@ def get_db_connection():
 # Load CSV to table:
 def load_third_party(connection, file_path_csv):
 
-    """
-    This function is used to create a cursor to establish a database connection, execute DDL statement, as well as read the CSV file to store
-    data into MySQL. Currently, I am stuck on the following error:
-
-        Message: 'Error while connecting to MySQL'
-        Arguments: (DatabaseError(1265, "1265 (01000): Data truncated for column 'trans_date' at row 1", '01000'),)
-
-        Note:
-            - I have tried using both pandas and CSV packages to iterate through CSV file and store data.
-
-
-    :param connection: use get_db_connection() to obtain database connection
-    :param file_path_csv:
-    :return: Nothing is returned. Simply, data is being loaded, but we can try to
-    create a logging statement, etc.
-    """
     try:
         # Create cursor object pointing to connection
         cursor = connection.cursor()
